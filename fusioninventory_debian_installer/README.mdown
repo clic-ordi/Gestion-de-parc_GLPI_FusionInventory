@@ -1,0 +1,67 @@
+
+# Setup script for GLPI & FusionInventory for GLPI on debian
+
+GLPI : http://glpi-project.org/ 
+FusionInventory : http://fusioninventory.org/
+
+Tested on debian server & lubuntu laptop, 
+
+***setup_mysql.sh still needs to be fixed***, you may have to type the sql request to create the database contained in the setup_mysql.sh script in a mysql console.
+
+## Mysql login
+
+Please change these in Makefile before starting the install 
+
+```
+SQL_GLPI_LOGIN=glpi
+SQL_GLPI_PWD=glpimdp
+
+ROOT_SQL_LOGIN=root
+ROOT_SQL_PWD=rootmdp
+
+BDD_NAME=glpi_bdd before use and commit (root sql wordpass)
+
+```
+
+## Dependancies
+
+In order to use Makefile, you have to install the command make
+
+```
+sudo apt-get install make
+```
+
+## HOW TO USE MAKEFILE
+
+By default, use 'make complete-install'
+
+### complete-install
+	removes the old installation and set it up again with 'make install'
+### install
+	intalls glpi + fusion inventory + dependancies
+### desinstall 
+	deletes most of the files
+### install-glpi-only
+	installs a glpi server
+### install-fusioninventory-only 
+	installs the fusioninventory plugin
+
+### post-install
+	removes install/install.php, 
+	! must only be done ***after a successful glpi setup*** on your web browser
+
+
+## FIX ME
+if you encounter issues linked to missing dependancies :
+Please add them to global_setup.sh !
+
+## PARAMETER LE CRON PHP
+
+On doit ajouter au fichier crontab (commande : crontab -e) la ligne
+
+```
+* * * * * /usr/bin/php /var/www/glpi/front/cron.php &>/dev/null
+```
+
+
+

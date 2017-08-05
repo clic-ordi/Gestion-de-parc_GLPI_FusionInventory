@@ -1,0 +1,94 @@
+# 1 - Disposer du fichier sur le serveur
+
+/glpi/plugins/fusioninventory/front/config.form.php > Gestion de paquets contient le "Chemin du dossier téléversant des fichiers du serveur", soit l'arboresence du dossier racine contenant les scripts ou installateurs sur le serveur, par défaut /var/www/glpi/files/_plugins/fusioninventory/upload.
+
+
+# 2 - Créer le groupe dynamique
+
+FusionInventoy>Général>Groupes d'ordinateurs>+ permet de créer un groupe dynamique fusioninventory.
+
+On lui donne un nom correspondant a une propriété des systèmes que le groupe va définir (exemple "windows" contiendra les systèmes windows, "windows64" uniquement les architectures 64 bits)
+	Ces groupes se remplissent seuls de machines correspondant à des critères
+On spécifie "Groupe dynamique" 
+On ajoute le groupe
+On choisit un critère ou plusieurs dans la liste("architecture du système", "Lieu", "Status"), un opérateur ("contient", "est"), une valeur.
+	L'ajax bugue ! Les opérateurs n'apparaissent pas toujours, vous pouvez sauvegarder le groupe puis y revenir pour constater d'éventuelles nouvelles possibilités.
+
+Les inventaires des machines client feront remonter les machines concernées dans le groupe.
+
+### Aide : FusionInventoy>Général contient le paramètre de fréquence des inventaires
+
+# 3 - créer le paquet de déploiement
+
+FusionInventoy>Déployer>+ permet de créer un nouveau paquet
+
+On lui donne un nom
+On ne donne pas de valeur à Enable self-service in defining computer group
+
+## 3.1 Package actions
+
+Certains forums parlent de bugs sur Audits, qui permet de prévoir des exception en cas de mauvais déroulement de l'installation, on ne s'en servira pas ici
+
+Fichiers + :
+	Source : depuis le serveur
+Vous pouvez alors sélectionner les fichiers ajoutés en ***1*** avec leur chemin absolu (/var/www/glpi/files/_plugins/fusioninventory/upload/.msi .bat .sh) ou en s'aidant du bouton "Choisir"
+
+
+Actions + :
+Pour windows :
+
+On doit d'abord disposer d'un dossier de destination, il faut ajouter cette action même si le dossier existe sur le poste client, elle renvoie un succés dans ce cas
+
+```	 
+Create directory
+c:\deploy
+
+```
+On crée un sous répertoire par paquet 
+
+```
+Create directory
+c:\deploy\firefox
+```
+On se place dans ce répertoire
+
+```
+Commande
+Commande à exécuter
+cd c:\deploy\firefox
+```
+on copie en utilisant l'opérateur * pour la source le paquet sur la machine client
+
+```
+Copier
+from * to c:\deploy\firefox
+```
+on exécute l'installateur (exemple pour un .msi)
+
+```
+Commande
+Commande à exécuter
+msiexec.exe /i c:\deploy\firefox\FirefoxESR-52.2.1-fr.msi /q
+```
+
+on sort du dossier
+
+```
+Commande
+Commande à exécuter
+cd..
+```
+
+# 4 - Créer la tâche liée
+
+FusionInventoy>Tâche>+ permet de créer une tâche
+
+On donne un nom à la tâche
+On la laisse non-active pour l'instant, on peut éventuellement lui affecter un créneau horaire 
+Configuration des jobs>Ajouter un job
+On donne un nom au job d'installation du paquet (ex: "Installer <whatever>"), on sélectionne la méthode "Package Deploy"
+On ajoute le job, on clique sur le job apparu dans la liste
+On ajoute en cible le paquet créé en ***3***, en acteur le groupe fusioninventory créé en ***2***, on clique sur mettre à jour, on retourne sur gestion des tâches
+On active la tâche
+
+Voir "trigger package deploy on client machine"

@@ -1,0 +1,57 @@
+
+# Installateur et lanceur pour FusionInventory-Agent for GLPI (v2.3.18)
+
+## Configuration de l'agent :
+
+La configuration se fait dans :
+Ordinateur\HKEY_LOCAL_MACHINE\SOFTWARE\FusionInventory-Agent
+et non dans /fusioninventory/etc/agent.cfg !
+
+Le paramètre server doit prendre la valeur http://(adresse IP ou domaine)/glpi/plugins/fusioninventory/front/plugin_fusioninventory.communication.php 
+	Note : ctrl+f de 'ip_ou_domaine' dans le .vbs fusioninventory-agent-deployment.vbs permet de fixer cette valeur avant l'installation.
+Le paramètre logger doit prendre la valeur File
+les autres paramètres peuvent etre laissés par défaut
+
+
+## Commande :
+
+Le script .vbs doit être lancé depuis ***une console powershell administrateur***
+
+la commande powershell pour lancer le script .vbs est 
+
+```
+.\nom_du_script 
+```
+ou
+
+
+```
+& nom_du_script 
+```
+
+## Maintenance du script force_run_agent :
+
+--no-fork --debug :
+	
+* permet de rediriger les logs vers une sortie 
+
+--daemon :
+
+* permet l'exécution en tant que service
+
+--force :
+	
+* force l'envoi de donnée au serveur
+Cette option devrait être désactivée si la charge de travail du serveur devient trop importante (trop d'utilisateurs simultanés)
+
+
+# Fix :
+
+Il est préférable de désinstaller l'agent avant de relancer le .vbs, même si 'Force = "Yes"'
+La verbose est désactivable, (ctrl+f verbose dans le .vbs)
+
+On peut s'assurer du fonctionnement de l'agent:
+
+* en forcant l'inventaire via la page de l'agent (http://localhost:62354/, http://localhost:62354/status) disponible a partir du .html inclus.
+
+* en lisant les logs (c:\Program Files\Fusioninventory-Agent\fusioninventory-agent.log), 
