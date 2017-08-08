@@ -1,0 +1,1233 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>body {
+  max-width: 980px;
+  border: 1px solid #ddd;
+  outline: 1300px solid #fff;
+  margin: 16px auto;
+}
+
+body .markdown-body
+{
+  padding: 45px;
+}
+
+@font-face {
+  font-family: fontawesome-mini;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+@font-face {
+  font-family: octicons-anchor;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+.markdown-body {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: #333333;
+  overflow: hidden;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.markdown-body a {
+  background: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline: 0;
+}
+
+.markdown-body b,
+.markdown-body strong {
+  font-weight: bold;
+}
+
+.markdown-body mark {
+  background: #ff0;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body sub,
+.markdown-body sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+.markdown-body sup {
+  top: -0.5em;
+}
+.markdown-body sub {
+  bottom: -0.25em;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.markdown-body img {
+  border: 0;
+}
+
+.markdown-body hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+.markdown-body pre {
+  overflow: auto;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+.markdown-body input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body html input[disabled] {
+  cursor: default;
+}
+
+.markdown-body input {
+  line-height: normal;
+}
+
+.markdown-body input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body .codehilitetable {
+  border: 0;
+  border-spacing: 0;
+}
+
+.markdown-body .codehilitetable tr {
+  border: 0;
+}
+
+.markdown-body .codehilitetable pre,
+.markdown-body .codehilitetable div.codehilite {
+  margin: 0;
+}
+
+.markdown-body .linenos,
+.markdown-body .code,
+.markdown-body .codehilitetable td {
+  border: 0;
+  padding: 0;
+}
+
+.markdown-body td:not(.linenos) .linenodiv {
+  padding: 0 !important;
+}
+
+.markdown-body .code {
+  width: 100%;
+}
+
+.markdown-body .linenos div pre,
+.markdown-body .linenodiv pre,
+.markdown-body .linenodiv {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.markdown-body .code div pre,
+.markdown-body .code div {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  -moz-border-radius-bottomright: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.markdown-body * {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font: 13px Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+  line-height: 1.4;
+}
+
+.markdown-body a {
+  color: #4183c4;
+  text-decoration: none;
+}
+
+.markdown-body a:hover,
+.markdown-body a:focus,
+.markdown-body a:active {
+  text-decoration: underline;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.markdown-body hr:before,
+.markdown-body hr:after {
+  display: table;
+  content: " ";
+}
+
+.markdown-body hr:after {
+  clear: both;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.markdown-body h1 {
+  font-size: 30px;
+}
+
+.markdown-body h2 {
+  font-size: 21px;
+}
+
+.markdown-body h3 {
+  font-size: 16px;
+}
+
+.markdown-body h4 {
+  font-size: 14px;
+}
+
+.markdown-body h5 {
+  font-size: 12px;
+}
+
+.markdown-body h6 {
+  font-size: 11px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body kbd {
+  background-color: #e7e7e7;
+  background-image: -moz-linear-gradient(#fefefe, #e7e7e7);
+  background-image: -webkit-linear-gradient(#fefefe, #e7e7e7);
+  background-image: linear-gradient(#fefefe, #e7e7e7);
+  background-repeat: repeat-x;
+  border-radius: 2px;
+  border: 1px solid #cfcfcf;
+  color: #000;
+  padding: 3px 5px;
+  line-height: 10px;
+  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  display: inline-block;
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body .headeranchor-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  padding-right: 6px;
+  padding-left: 30px;
+  margin-left: -30px;
+}
+
+.markdown-body .headeranchor-link:focus {
+  outline: none;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  position: relative;
+  margin-top: 1em;
+  margin-bottom: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.markdown-body h1 .headeranchor,
+.markdown-body h2 .headeranchor,
+.markdown-body h3 .headeranchor,
+.markdown-body h4 .headeranchor,
+.markdown-body h5 .headeranchor,
+.markdown-body h6 .headeranchor {
+  display: none;
+  color: #000;
+  vertical-align: middle;
+}
+
+.markdown-body h1:hover .headeranchor-link,
+.markdown-body h2:hover .headeranchor-link,
+.markdown-body h3:hover .headeranchor-link,
+.markdown-body h4:hover .headeranchor-link,
+.markdown-body h5:hover .headeranchor-link,
+.markdown-body h6:hover .headeranchor-link {
+  height: 1em;
+  padding-left: 8px;
+  margin-left: -30px;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .headeranchor-link .headeranchor,
+.markdown-body h2:hover .headeranchor-link .headeranchor,
+.markdown-body h3:hover .headeranchor-link .headeranchor,
+.markdown-body h4:hover .headeranchor-link .headeranchor,
+.markdown-body h5:hover .headeranchor-link .headeranchor,
+.markdown-body h6:hover .headeranchor-link .headeranchor {
+  display: inline-block;
+}
+
+.markdown-body h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+.markdown-body h4 {
+  font-size: 1.25em;
+}
+
+.markdown-body h5 {
+  font-size: 1em;
+}
+
+.markdown-body h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre,
+.markdown-body .admonition {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+.markdown-body table th {
+  font-weight: bold;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body code,
+.markdown-body samp {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+.markdown-body code:before,
+.markdown-body code:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .codehilite {
+  margin-bottom: 16px;
+}
+
+.markdown-body .codehilite pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+.markdown-body .codehilite pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body pre code:before,
+.markdown-body pre code:after {
+  content: normal;
+}
+
+/* Admonition */
+.markdown-body .admonition {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  position: relative;
+  border-radius: 3px;
+  border: 1px solid #e0e0e0;
+  border-left: 6px solid #333;
+  padding: 10px 10px 10px 30px;
+}
+
+.markdown-body .admonition table {
+  color: #333;
+}
+
+.markdown-body .admonition p {
+  padding: 0;
+}
+
+.markdown-body .admonition-title {
+  font-weight: bold;
+  margin: 0;
+}
+
+.markdown-body .admonition>.admonition-title {
+  color: #333;
+}
+
+.markdown-body .attention>.admonition-title {
+  color: #a6d796;
+}
+
+.markdown-body .caution>.admonition-title {
+  color: #d7a796;
+}
+
+.markdown-body .hint>.admonition-title {
+  color: #96c6d7;
+}
+
+.markdown-body .danger>.admonition-title {
+  color: #c25f77;
+}
+
+.markdown-body .question>.admonition-title {
+  color: #96a6d7;
+}
+
+.markdown-body .note>.admonition-title {
+  color: #d7c896;
+}
+
+.markdown-body .admonition:before,
+.markdown-body .attention:before,
+.markdown-body .caution:before,
+.markdown-body .hint:before,
+.markdown-body .danger:before,
+.markdown-body .question:before,
+.markdown-body .note:before {
+  font: normal normal 16px fontawesome-mini;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1.5;
+  color: #333;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.markdown-body .admonition:before {
+  content: "\f056\00a0";
+  color: 333;
+}
+
+.markdown-body .attention:before {
+  content: "\f058\00a0";
+  color: #a6d796;
+}
+
+.markdown-body .caution:before {
+  content: "\f06a\00a0";
+  color: #d7a796;
+}
+
+.markdown-body .hint:before {
+  content: "\f05a\00a0";
+  color: #96c6d7;
+}
+
+.markdown-body .danger:before {
+  content: "\f057\00a0";
+  color: #c25f77;
+}
+
+.markdown-body .question:before {
+  content: "\f059\00a0";
+  color: #96a6d7;
+}
+
+.markdown-body .note:before {
+  content: "\f040\00a0";
+  color: #d7c896;
+}
+
+.markdown-body .admonition::after {
+  content: normal;
+}
+
+.markdown-body .attention {
+  border-left: 6px solid #a6d796;
+}
+
+.markdown-body .caution {
+  border-left: 6px solid #d7a796;
+}
+
+.markdown-body .hint {
+  border-left: 6px solid #96c6d7;
+}
+
+.markdown-body .danger {
+  border-left: 6px solid #c25f77;
+}
+
+.markdown-body .question {
+  border-left: 6px solid #96a6d7;
+}
+
+.markdown-body .note {
+  border-left: 6px solid #d7c896;
+}
+
+.markdown-body .admonition>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body .admonition>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* progress bar*/
+.markdown-body .progress {
+  display: block;
+  width: 300px;
+  margin: 10px 0;
+  height: 24px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #ededed;
+  position: relative;
+  box-shadow: inset -1px 1px 3px rgba(0, 0, 0, .1);
+}
+
+.markdown-body .progress-label {
+  position: absolute;
+  text-align: center;
+  font-weight: bold;
+  width: 100%; margin: 0;
+  line-height: 24px;
+  color: #333;
+  text-shadow: 1px 1px 0 #fefefe, -1px -1px 0 #fefefe, -1px 1px 0 #fefefe, 1px -1px 0 #fefefe, 0 1px 0 #fefefe, 0 -1px 0 #fefefe, 1px 0 0 #fefefe, -1px 0 0 #fefefe, 1px 1px 2px #000;
+  -webkit-font-smoothing: antialiased !important;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.markdown-body .progress-bar {
+  height: 24px;
+  float: left;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #96c6d7;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .5), inset 0 -1px 0 rgba(0, 0, 0, .1);
+  background-size: 30px 30px;
+  background-image: -webkit-linear-gradient(
+    135deg, rgba(255, 255, 255, .4) 27%,
+    transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%,
+    transparent 77%, transparent
+  );
+  background-image: -moz-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -ms-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -o-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+}
+
+.markdown-body .progress-100plus .progress-bar {
+  background-color: #a6d796;
+}
+
+.markdown-body .progress-80plus .progress-bar {
+  background-color: #c6d796;
+}
+
+.markdown-body .progress-60plus .progress-bar {
+  background-color: #d7c896;
+}
+
+.markdown-body .progress-40plus .progress-bar {
+  background-color: #d7a796;
+}
+
+.markdown-body .progress-20plus .progress-bar {
+  background-color: #d796a6;
+}
+
+.markdown-body .progress-0plus .progress-bar {
+  background-color: #c25f77;
+}
+
+.markdown-body .candystripe-animate .progress-bar{
+  -webkit-animation: animate-stripes 3s linear infinite;
+  -moz-animation: animate-stripes 3s linear infinite;
+  animation: animate-stripes 3s linear infinite;
+}
+
+@-webkit-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@-moz-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+.markdown-body .gloss .progress-bar {
+  box-shadow:
+    inset 0 4px 12px rgba(255, 255, 255, .7),
+    inset 0 -12px 0 rgba(0, 0, 0, .05);
+}
+
+/* Multimarkdown Critic Blocks */
+.markdown-body .critic_mark {
+  background: #ff0;
+}
+
+.markdown-body .critic_delete {
+  color: #c82829;
+  text-decoration: line-through;
+}
+
+.markdown-body .critic_insert {
+  color: #718c00 ;
+  text-decoration: underline;
+}
+
+.markdown-body .critic_comment {
+  color: #8e908c;
+  font-style: italic;
+}
+
+.markdown-body .headeranchor {
+  font: normal normal 16px octicons-anchor;
+  line-height: 1;
+  display: inline-block;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.headeranchor:before {
+  content: '\f05c';
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 4px 0.25em -20px;
+  vertical-align: middle;
+}
+
+/* Media */
+@media only screen and (min-width: 480px) {
+  .markdown-body {
+    font-size:14px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .markdown-body {
+    font-size:16px;
+  }
+}
+
+@media print {
+  .markdown-body * {
+    background: transparent !important;
+    color: black !important;
+    filter:none !important;
+    -ms-filter: none !important;
+  }
+
+  .markdown-body {
+    font-size:12pt;
+    max-width:100%;
+    outline:none;
+    border: 0;
+  }
+
+  .markdown-body a,
+  .markdown-body a:visited {
+    text-decoration: underline;
+  }
+
+  .markdown-body .headeranchor-link {
+    display: none;
+  }
+
+  .markdown-body a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  .markdown-body abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  .markdown-body .ir a:after,
+  .markdown-body a[href^="javascript:"]:after,
+  .markdown-body a[href^="#"]:after {
+    content: "";
+  }
+
+  .markdown-body pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  .markdown-body pre,
+  .markdown-body blockquote {
+    border: 1px solid #999;
+    padding-right: 1em;
+    page-break-inside: avoid;
+  }
+
+  .markdown-body .progress,
+  .markdown-body .progress-bar {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .markdown-body .progress {
+    border: 1px solid #ddd;
+  }
+
+  .markdown-body .progress-bar {
+    height: 22px;
+    border-right: 1px solid #ddd;
+  }
+
+  .markdown-body tr,
+  .markdown-body img {
+    page-break-inside: avoid;
+  }
+
+  .markdown-body img {
+    max-width: 100% !important;
+  }
+
+  .markdown-body p,
+  .markdown-body h2,
+  .markdown-body h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  .markdown-body h2,
+  .markdown-body h3 {
+    page-break-after: avoid;
+  }
+}
+</style><title>intitules</title></head><body><article class="markdown-body"><h1 id="configurer-les-intitules"><a name="user-content-configurer-les-intitules" href="#configurer-les-intitules" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>CONFIGURER LES INTITULÉS</h1>
+<p><a href="http://glpi-project.org/DOC/FR/glpi/config_dropdown.html">http://glpi-project.org/DOC/FR/glpi/config_dropdown.html</a></p>
+<p>Pour tout intitulés ou objets ayant une relation parent/enfant, la modification d&rsquo;un enfant apparaîtra dans l&rsquo;historique de l&rsquo;élément parent.</p>
+<p>À chaque intitulé est associé un commentaire. Celui-ci est visible depuis les formulaires de GLPI. Il apparaît au survol de l&rsquo;icône Aide associée à la liste déroulante.</p>
+<p>Certains intitulés sont en arborescence. Il est possible de créer des intitulés enfants d&rsquo;un intitulé existant.</p>
+<p>Les intitulés lieu, catégories des tickets et des tâches peuvent être définis comme utilisables dans les sous-entités.Certains intitulés, correspondant à des items créés en série, peuvent être créés en masse en suivant une nomenclature de type préfixe, numérotation incrémentale, suffixe.</p>
+<h2 id="-lieu"><a name="user-content--lieu" href="#-lieu" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>- Lieu</h2>
+<p>Les lieux peuvent être définis sous forme d&rsquo;arborescence. Par exemple: Bâtiment 1 &gt; Etage 0 ; Bâtiment 1 a été créé dans un premier temps, puis Etage 0 a été créé comme enfant de Bâtiment 1;</p>
+<p>Des informations supplémentaires telles que le code du bâtiment et de la pièce peuvent être ajoutées.</p>
+<h2 id="-tickets"><a name="user-content--tickets" href="#-tickets" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>- Tickets</h2>
+<p>Catégorie des tickets</p>
+<p>Un responsable technique et un groupe peuvent être affectés à une catégorie. Si le paramètre Assigner automatiquement les tickets au responsable technique est activé dans la configuration générale, et que le ticket n&rsquo;a pas de technicien ou de groupe associé, ces valeurs sont positionnées sur celles de la catégorie. Voir Configurer les paramètres centraux : <a href="http://glpi-project.org/DOC/FR/glpi/config_common.html">http://glpi-project.org/DOC/FR/glpi/config_common.html</a>.</p>
+<p><strong><em>ATTENTION :</em></strong><br />
+le responsable technique du matériel associé au ticket est prioritaire sur le responsable technique de la catégorie.</p>
+<h2 id="-calendrier-et-periodes-de-fermeture"><a name="user-content--calendrier-et-periodes-de-fermeture" href="#-calendrier-et-periodes-de-fermeture" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>- Calendrier et Périodes de fermeture</h2>
+<p>Les calendriers utilisés au sein de GLPI sont paramétrables. Ils sont caractérisés par des périodes d&rsquo;ouverture (autant que nécessaire par jour) ainsi que des périodes de fermeture (vacances, jours fériés&hellip;). Ces périodes de fermeture peuvent être récurrentes, c&rsquo;est à dire quelles apparaissent tous les ans aux même dates. Ces calendriers sont utilisés dans les SLAs</p>
+<h1 id="entites"><a name="user-content-entites" href="#entites" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>ENTITÉS</h1>
+<p>lien de référence : <a href="http://glpi-project.org/DOC/FR/glpi/administration_entity.html">http://glpi-project.org/DOC/FR/glpi/administration_entity.html</a></p>
+<p>Les entités sont des structures hierarchiques de systèmes au sein de l&rsquo;instance de GLPI (root).</p>
+<p>L&rsquo;utilisation des entités permet un cloisonnement relativement étanche entre les unités organisationnelles. Dans les cas où ce cloisonnement étanche n&rsquo;est pas souhaité, il est préférable d&rsquo;utiliser les fonctionnalités offertes par les groupes.</p>
+<p>On peut affecter un ordinateur à une entité, déclarer un ticket sur une entité, créer des profils, gérer des habilitations spécifiques à chaque entité. L&rsquo;affectation automatique des utilisateurs et des matériels est possible grâce au paramétrage de règles.</p>
+<p>exemple :</p>
+<pre><code>
+          ROOT
+    |------|------|
+   EA            EB
+  |   |        |    |
+EA1   EA2     EB1   EB2
+
+</code></pre>
+
+<p>ROOT (entité par défaut de GLPI) a une vision de son parc et de toutes les entités. <br />
+ EA a une vision de son parc et de EA1 et EA2.<br />
+ EA1 ne voit que son parc.</p>
+<p>Un utilisateur peut être rattaché à plusieurs entités avec des droits différents. Ces droits peuvent être conservés sur les entités filles ou non. </p>
+<h1 id="groupes"><a name="user-content-groupes" href="#groupes" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>GROUPES</h1>
+<p>lien de référence : <a href="http://glpi-project.org/DOC/FR/glpi/administration_group.html">http://glpi-project.org/DOC/FR/glpi/administration_group.html</a></p>
+<p>Dans GLPI, administrer les groupes peut se faire à partir du menu Administration &gt; Groupes . </p>
+<p>Un groupe est attaché à l&rsquo;entité dans laquelle il est créé et peut ensuite être visible dans les sous-entités.</p>
+<h2 id="-usage"><a name="user-content--usage" href="#-usage" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>- usage</h2>
+<ul>
+<li>rassemblement d&rsquo;utilisateurs par compétences (par exemple les techniciens réseaux, ou les administrateurs de base de données) pour le helpdesk, </li>
+<li>regroupements organisationnels (par exemple tous les ordinateurs de la direction, ou du service comptable) </li>
+<li>ensemble de personnes à notifier.</li>
+</ul>
+<h2 id="-fonctions"><a name="user-content--fonctions" href="#-fonctions" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>- fonctions</h2>
+<p>Un groupe peut avoir ou plusieurs superviseurs, notion utilisable ensuite pour les notifications, par exemple pour envoyer un courriel au(x) superviseur(s) du groupe à l&rsquo;ouverture d&rsquo;un ticket.</p>
+<p>Un mécanisme de délégation permet à un utilisateur de déclarer des incidents non pas pour lui mais pour un des membres de ce groupe.</p>
+<p>Différents onglets supplémentaires affichent, en fonction des options choisies : les utilisateurs (liste, ajout et suppression de membres), les matériels gérés (liste des matériels qui ont ce groupe technique), la liste des matériels utilisés (matériels appartenant à ce groupe) et liaison annuaire LDAP (informations permettant à GLPI retrouver le groupe et ses utilisateurs dans l&rsquo;annuaire).</p>
+<p>La liaison LDAP rend possible l&rsquo;import et la synchronisation des groupes depuis un annuaire. Si l&rsquo;authentification externe est utilisée, l&rsquo;import les groupes depuis un annuaire LDAP, et l&rsquo;affectation des utilisateurs dans les groupes est possible.</p>
+<h1 id="utilisateurs"><a name="user-content-utilisateurs" href="#utilisateurs" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>UTILISATEURS</h1>
+<p>lien de référence : <a href="http://glpi-project.org/DOC/FR/glpi/administration_user.html">http://glpi-project.org/DOC/FR/glpi/administration_user.html</a></p>
+<p>En plus des informations de l&rsquo;utilisateur, il est possible de le désactiver si besoin (champ Actif). Dans ce cas, l&rsquo;utilisateur n&rsquo;est plus sélectionnable dans les menus déroulants des tickets ou de l&rsquo;inventaire, mais il conserve ses matériels et tickets associés. </p>
+<p>Habilitations permet d&rsquo;administrer les habilitations dont dispose l&rsquo;utilisateur ;</p>
+<p>Pour cela, sélectionner l&rsquo;entité sur laquelle les droits doivent être donnés, puis les droits (profil) à donner. <strong><em>L&rsquo;option Récursif</em></strong> permet d&rsquo;associer également le profil à toutes les sous-entités de l&rsquo;entité sélectionnée ;</p>
+<ul>
+<li>Matériels utilisés :</li>
+</ul>
+<p>Liste les objets d&rsquo;inventaire affectés à l&rsquo;utilisateur ou à un groupe dont il est membre ;</p>
+<ul>
+<li>Matériels gérés</li>
+</ul>
+<p>Liste les objets d&rsquo;inventaire pour lesquels il est responsable technique ou dans le groupe responsable technique ;</p>
+<h2 id="-historique"><a name="user-content--historique" href="#-historique" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>- Historique</h2>
+<p>L&rsquo;onglet Historique permet de visualiser toutes les modifications apportées à la description d&rsquo;un élément. Le contexte du changement est précisé :</p>
+<ul>
+<li>le jour et l&rsquo;heure de la modification</li>
+<li>l&rsquo;utilisateur qui est l&rsquo;auteur de la modification</li>
+<li>le champ ou la partie concernée (document, logiciel, composant&hellip;)</li>
+</ul>
+<p>La description du changement présente soit l&rsquo;évolution entre l&rsquo;ancienne et la nouvelle valeur, soit l&rsquo;explication de l&rsquo;action qui a été réalisée (par exemple : Désinstallation d&rsquo;un logiciel : &ldquo;Gimp 2.0&rdquo;).</p>
+<h1 id="gestion-didentites"><a name="user-content-gestion-didentites" href="#gestion-didentites" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>GESTION D&rsquo;IDENTITÉS</h1>
+<ol>
+<li>l&rsquo;utilisateur entre son identifiant et son mot de passe ;</li>
+<li>
+<p>GLPI vérifie si l&rsquo;utilisateur est déjà enregistré dans la base. S&rsquo;il ne l&rsquo;est pas :<br />
+    a. GLPI essaye les méthodes d&rsquo;authentification les unes après les autres : la base interne, puis tous les annuaires LDAP et enfin les annuaires de messagerie ;</p>
+<p>b. lorsque l&rsquo;authentification est réussie, l&rsquo;utilisateur est créé dans la base interne, ainsi que sa méthode d&rsquo;authentification ;</p>
+<p>c. si aucune source n&rsquo;a pu authentifier l&rsquo;utilisateur, celui-ci est redirigé vers une page lui indiquant que son identifiant ou mot de passe est incorrect ;</p>
+</li>
+<li>
+<p>Si l&rsquo;utilisateur est déjà présent dans la base interne, ou une fois son identifiant créé :<br />
+    a. GLPI tente d&rsquo;authentifier l&rsquo;utilisateur en utilisant la dernière méthode d&rsquo;authentification réussie (et uniquement celle-ci) ;<br />
+    b. Si l&rsquo;authentification a échoué, l&rsquo;utilisateur est redirigé vers une page lui indiquant que son identifiant ou mot de passe est incorrect ;</p>
+</li>
+<li>Le moteur d&rsquo;habilitation est lancé avec les informations de l&rsquo;utilisateur :<br />
+    a. Si le moteur a donné à celui-ci une ou plusieurs habilitations, alors l&rsquo;utilisateur a accès à GLPI ;<br />
+    b. Si l&rsquo;utilisateur ne se voit attribuer aucune habilitation, alors bien qu&rsquo;étant inscrit dans la base GLPI, il ne peut se connecter à l&rsquo;application.</li>
+</ol>
+<h1 id="profils"><a name="user-content-profils" href="#profils" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>PROFILS</h1>
+<p>Lien de référence : <a href="http://glpi-project.org/DOC/FR/glpi/administration_profile.html">http://glpi-project.org/DOC/FR/glpi/administration_profile.html</a></p>
+<p>Un profil est associé à :</p>
+<ul>
+<li>Un utilisateur ;</li>
+<li>Une entité (De manière récursive ou dynamique).</li>
+</ul>
+<p>Pour répercuter les droits liés à ce profil, à toutes les entités filles de l&rsquo;entité enregistré, il faut associer le profil de manière récursive. C&rsquo;est là tout le principe de récursivité.</p>
+<p>Il est également possible d&rsquo;ajouter un profil à un utilisateur sur plusieurs entités sans lien réel entre elles. Pour ce faire, il suffit d&rsquo;ajouter un profil à un utilisateur x fois, x étant le nombre d&rsquo;entités à couvrir.</p>
+<p>Il est donc possible d&rsquo;associer des profils différents à un même utilisateur !</p>
+<h2 id="-profils-par-defaut-de-glpi"><a name="user-content--profils-par-defaut-de-glpi" href="#-profils-par-defaut-de-glpi" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>- Profils par défaut de GLPI</h2>
+<ul>
+<li>Super-Admin</li>
+</ul>
+<p>Ce profil dispose de tous les droits! </p>
+<ul>
+<li>Admin</li>
+</ul>
+<p>Ce profil dispose de droits d&rsquo;administration sur l&rsquo;intégralité de GLPI. Certaines restrictions lui sont appliquées au niveau de la configuration des règles, des entités ainsi que d&rsquo;autres rubriques pouvant altérer le comportement de GLPI.</p>
+<ul>
+<li>Supervisor</li>
+</ul>
+<p>Ce profil reprend les élements du profil Technician en y ajoutant des élément permettant la <strong><em>gestion d&rsquo;une équipe et son organisation</em></strong> (attribution de tickets&hellip;)</p>
+<ul>
+<li>Technician</li>
+</ul>
+<p>Ce profil correspond à celui utilisé pour <strong><em>un technicien de maintenance</em></strong>. Il a accès à l&rsquo;<strong><em>inventaire en lecture et au helpdesk afin de traiter des tickets.</em></strong></p>
+<ul>
+<li>Hotliner</li>
+</ul>
+<p>Ce profile correspond à celui que l&rsquo;on pourrait donner pour un service de Hotline. Il permet de saisir des tickets et de les suivre mais pas d&rsquo;en être en charge comme peut l&rsquo;être un technicien.</p>
+<ul>
+<li>Observer</li>
+</ul>
+<p>Ce profil dispose de droits de lecture sur toutes les données d&rsquo;inventaire et de gestion. Au niveau de l&rsquo;assistance, il pourra déclarer un ticket ou s&rsquo;en voir attribuer mais ne pourra administrer cette rubrique (attribuer un ticket, voler un ticket&hellip;). Il ne dispose cependant d&rsquo;aucun droit lié à l&rsquo;administration ou à la configuration de GLPI. </p>
+<ul>
+<li>Self-Service (ce n&rsquo;est pas celui de FusionInventory)</li>
+</ul>
+<p>Ce profil est le plus limité. C&rsquo;est d&rsquo;ailleurs le seul à disposer d&rsquo;une interface différente, l&rsquo;interface simplifiée, en opposition à l&rsquo;interface standard. Il pourra cependant déclarer un ticket, y ajouter un suivi, consulter la FAQ ou encore réserver un matériel. Ce profil est enregistré comme profil par défaut. </p>
+<h2 id="-profil-par-defaut-a-la-creation-de-lutilisateur"><a name="user-content--profil-par-defaut-a-la-creation-de-lutilisateur" href="#-profil-par-defaut-a-la-creation-de-lutilisateur" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>- Profil par défaut à la création de l&rsquo;utilisateur</h2>
+<p>Lorsque ce champ est renseigné à Oui, Tout utilisateur créé ou importé se verra associé le profil en question.<br />
+Si plus d&rsquo;un profil est enregistré comme profil par défaut, le premier enregistré fera autorité sur tous les autres.</p>
+<h2 id="-mot-de-passe"><a name="user-content--mot-de-passe" href="#-mot-de-passe" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>- Mot de passe</h2>
+<p>Si l&rsquo;authentification par Annuaire est activée, un utilisateur perdra sa capacité à modifier son mot de passe, de même pour tout autre donnée liée à l&rsquo;annuaire. </p>
+<h2 id="-habilitations"><a name="user-content--habilitations" href="#-habilitations" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>- Habilitations</h2>
+<p>Si un profil par défaut est défini dans la configuration des profils de GLPI, et si une règle d&rsquo;affectation d&rsquo;habilitation ne comporte pas d&rsquo;affectation de profil, alors le profil par défaut est utilisé lors de l&rsquo;affectation d&rsquo;un utilisateur à l&rsquo;entité.</p>
+<p>Si aucun profil par défaut n&rsquo;est défini, l&rsquo;utilisateur est importé sans habilitation : il n&rsquo;est ni affecté à une entité, ni affecté à un profil. Seul le profil super-admin peut le voir dans l&rsquo;entité racine. </p>
+<p>Un utilisateur possédant plusieurs habilitations peut, au cours de sa session et selon ses activités, changer de profil et de contexte d&rsquo;entité.</p>
+<p>Les habilitations peuvent être attribuées statiquement, en affectant un utilisateur à un profil dans une entité, mais ce n&rsquo;est pas la méthode conseillée.</p>
+<p>Il est conseillé d&rsquo;utiliser le <strong><em>moteur de règles d&rsquo;affectation d&rsquo;entité</em></strong> et de droits pour attribuer automatiquement les habilitations. Pour cela, il est nécessaire d&rsquo;utiliser une authentification externe. Ce type de règle est accessible depuis le menu Administration &gt; Règles &gt; Règles d&rsquo;affectation d&rsquo;entités et de droits .</p>
+<h2 id="-droits-des-profils"><a name="user-content--droits-des-profils" href="#-droits-des-profils" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>- Droits des profils</h2>
+<h3 id="-parcgestionoutils"><a name="user-content--parcgestionoutils" href="#-parcgestionoutils" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>&ndash; Parc/Gestion/Outils</h3>
+<p>Cet onglet permet de définir les accès liés à l&rsquo;inventaire, à sa gestion ainsi qu&rsquo;aux différents outils tels que les flux RSS ou encore la FAQ.</p>
+<ul>
+<li>Parc : Droits sur tout ou partie des types de matériels ;</li>
+<li>Gestion : Droits sur les Contacts et Fournisseurs ainsi qu&rsquo;aux Documents, Informations financières, Budget et Contrats ;</li>
+<li>Outils : Droits sur les Notes, la FAQ, la base de connaissances, les rapports, la réservation de matériel et les flux RSS. Le droit d&rsquo;administration de la base de connaissances permet de voir et éditer tous les éléments sans prise en compte des cibles définies.</li>
+</ul>
+<h3 id="-administrationconfiguration"><a name="user-content--administrationconfiguration" href="#-administrationconfiguration" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>&ndash; Administration/Configuration</h3>
+<p>Cet onglet permet de définir les accès liés à l&rsquo;administration et la configuration de GLPI. Elle couvre : </p>
+<h3 id="-assistance"><a name="user-content--assistance" href="#-assistance" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>&ndash; Assistance</h3>
+<p>Cet onglet permet de définir les accès liés à l&rsquo;assistance et plus particulièrement sur la partie Helpdesk de GLPI. </p>
+<h1 id="ordinateurs"><a name="user-content-ordinateurs" href="#ordinateurs" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>ORDINATEURS</h1>
+<p>Dans la fiche d&rsquo;un ordinateur, on trouve un certain nombre d&rsquo;informations concernant :<br />
+<em> le système d&rsquo;exploitation (nom, version, service pack, numéro de série, product ID), <br />
+</em> les caractéristiques générales (fabricant, modèle, type, numéro de série), <br />
+<em> les informations de gestion (responsable technique, statut, localisation) <br />
+</em> les usagers du poste (connus ou non dans GLPI).</p>
+<p>D&rsquo;autres champs sont informatifs, comme Réseau (type de connexion au poste), et la source de la mise à jour qui est un intitulé indiquant d&rsquo;où proviennent les mises à jour d&rsquo;un poste (oui/non, Windows update, yum, apt, etc). </p>
+<h1 id="logiciel"><a name="user-content-logiciel" href="#logiciel" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>LOGICIEL</h1>
+<p>Lien de référence : <a href="http://glpi-project.org/DOC/FR/glpi/inventory_software.html">http://glpi-project.org/DOC/FR/glpi/inventory_software.html</a></p>
+<p>GLPI permet la gestion des logiciels et de leurs versions ainsi que des licences (pouvant être associées ou non à des versions). </p>
+<h2 id="-doublons-eventuels"><a name="user-content--doublons-eventuels" href="#-doublons-eventuels" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>- Doublons éventuels</h2>
+<p>Un logiciel est par défaut associé à une entité : c&rsquo;est à dire qu&rsquo;il y a aura autant de logiciels dans la base qu&rsquo;il y a d&rsquo;entités. Rendre un logiciel visible dans les sous-entités permet de faire une gestion plus fine. </p>
+<p>Une gestion fine des logiciels, licences et versions peut consister à regrouper les logiciels identiques dans une même entité (voir Regrouper les logiciels (multi-entités).), puis à rendre récursif les éléments qui peuvent l&rsquo;être.</p>
+<h2 id="-dictionnaires"><a name="user-content--dictionnaires" href="#-dictionnaires" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>- Dictionnaires</h2>
+<p>Les logiciels peuvent être importés automatiquement depuis un outil d&rsquo;inventaire tiers et dans ce cas un dictionnaire peut être utilisé pour filtrer ou nettoyer les données</p>
+<p>Les dictionnaires permettent de modifier les données qui sont entrées ou existent déjà dans GLPI. Ils se basent sur le moteur de règles et sont disponibles pour certaines données d&rsquo;inventaire (logiciels, fabricants, intitulés). Ces dictionnaires permettent de disposer de règles qui vont modifier des valeurs entrées manuellement, ajoutées automatiquement via un outil d&rsquo;inventaire, ou des plugins (par exemple l&rsquo;injecteur de fichiers CSV).</p>
+<p>Le dictionnaire fonctionne de la manière suivante :</p>
+<pre><code>la donnée à ajouter passe dans le dictionnaire ;
+le moteur de règle rejoue toutes les règles concernant ce type de données, et s'arrête à la première vérifiée;
+la donnée modifiée est retournée par le dictionnaire et insérée en base.
+</code></pre>
+<p>Une fonction nommée Rejouer le dictionnaire (disponible à travers un bouton sur la liste des règles) permet de repasser les règles sur des données déjà existantes en base.</p>
+<h2 id="-installations"><a name="user-content--installations" href="#-installations" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>- Installations</h2>
+<p>2 options sont disponibles sur la liste des installations de logiciels d&rsquo;un ordinateur. Au dessus de la liste, Installer manuellement une version d&rsquo;un logiciel sur le poste (nécessite de sélectionner le logiciel et la version) : si une licence est associée à celui-ci la &ldquo;version d&rsquo;utilisation&rdquo; de la licence est automatiquement renseignée.</p>
+<p>Pour Désinstaller une version d&rsquo;un logiciel, il faut utiliser le système d&rsquo;actions massives : sélectionner les versions à supprimer puis choisir Supprimer définitivement. Si une licence est affectée à l&rsquo;ordinateur elle le reste, mais sa &ldquo;version d&rsquo;utilisation&rdquo; est effacée.</p>
+<p>A la suite des versions installées, la liste des licences affectées mais non installées est affichée. Vous pouvez ajouter une nouvelle licence associée à cet ordinateur. Le système d&rsquo;actions massives permet, via l&rsquo;action Installer, d&rsquo;installer les versions d&rsquo;utilisation des licences sélectionnées.</p>
+<h1 id="budgets"><a name="user-content-budgets" href="#budgets" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>BUDGETS</h1>
+<p>Les budgets sont gérés depuis le menu Gestion &gt; Budgets</p>
+<p>Un budget est composé d&rsquo;un certain nombre de champs : un nom, une valeur, une période pendant laquelle le budget a été alloué, défini par une date de début ainsi qu&rsquo;une date de fin.</p>
+<p>Le budget doit être défini dans les informations financières des matériels.</p>
+<p>Il peut également être défini sur plusieurs entités (récursivité).</p>
+<p>Un résumé du budget par type de matériel est présenté (total dépensé par type, total restant).</p>
+<h1 id="contrats"><a name="user-content-contrats" href="#contrats" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>CONTRATS</h1>
+<p>Il est possible d&rsquo;être alerté par courriel sur la fin ou le préavis du contrat. </p>
+<p>Ils contiennent : </p>
+<ul>
+<li>
+<p>Des informations générales (nom, type, numéro) ;</p>
+</li>
+<li>
+<p>Des informations temporelles (date de début, durée, périodicité, plages horaires d&rsquo;intervention). Les plages horaires sont intéressantes dans le cadre d&rsquo;un contrat de maintenance ou d&rsquo;infogérance par exemple ;</p>
+</li>
+<li>
+<p>Des informations comptables (reconduction, durée de préavis, périodicité de facturation)</p>
+</li>
+</ul>
+<h2 id="-precisions-sur-les-contrats"><a name="user-content--precisions-sur-les-contrats" href="#-precisions-sur-les-contrats" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>- Précisions sur les contrats</h2>
+<ul>
+<li>
+<p>Date de début : À ne pas confondre avec la date d&rsquo;enregistrement du contrat dans GLPI. Tous les calculs de périodicité sur le contrat sont donc fonction de cette date ;</p>
+</li>
+<li>
+<p>Plages horaires d&rsquo;intervention : Les plages horaires d&rsquo;intervention correspondent aux horaires d&rsquo;intervention couvert par le contrat. Il est possible d&rsquo;y distinguer les jours chômés ;</p>
+</li>
+</ul>
+<p><strong><em>Conseil :</em></strong> Ceci est configurable par entité dans le menu Configuration &gt; Notifications pour définir les modèles et destinataires utilisés et dans le menu Configuration &gt; Entité pour activer ou non cette fonctionnalité, définir les valeurs par défaut et une anticipation de l&rsquo;envoi de la notification si besoin.</p>
+<h2 id="-couts"><a name="user-content--couts" href="#-couts" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>- Coûts</h2>
+<p>Des coûts peuvent être associés à un contrat. Les éléments de coûts peuvent être saisi indépendamment (coût initial, coût avenant&hellip;). Chaque élément peut être lié à un budget différent </p>
+<p>Pour faciliter la saisie de plusieurs coûts, le formulaire est initialisé en fonction du dernier coût saisi. Il suffit alors de modifier uniquement les informations nécessaires.</p>
+<h1 id="slas"><a name="user-content-slas" href="#slas" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>SLAS</h1>
+<p>Un SLA (Service Level Agreement ou accord de niveau de service) est la formalisation d&rsquo;un contrat négocié entre le ServiceDesk et le client définissant le niveau de service attendu et donc au délai maximum pour résoudre un incident ou une demande (J+1, H+4&hellip;). </p>
+<p>Des niveaux d&rsquo;escalades peuvent être définis au sein d&rsquo;un SLA. Chaque niveau déclenche des actions automatiques permettant la résolution du ticket dans les meilleurs délais. Un niveau se déclenche avant ou après la date d&rsquo;échéance du SLA en fonction du délai défini. Par exemple, un jour avant l&rsquo;échéance, le ticket est affecté au support de niveau 2 et sa priorité passée à Haute.</p>
+<p>L&rsquo;association du SLA au ticket permet le calcul automatique de sa date d&rsquo;échéance. Plusieurs SLAs peuvent ainsi être définis et affectés suivant des critères précis. Par exemple, le SLA 1 sera affecté si le ticket est associé à une catégorie spécifique et le SLA 2 pour les autres catégories.</p>
+<p><strong><em>Attention</em></strong> : Une SLA peut être affectée a posteriori. A l&rsquo;affectation de celui-ci, il sera complètement rejoué et les actions associées aux niveaux d&rsquo;escalade passés seront exécutées.</p>
+<p>Le passage du ticket au statut en attente met le SLA en sommeil. Si le ticket reste en attente 3 heures par exemple, la date d&rsquo;échéance sera repoussée de 3 heures.</p>
+<p>Pour un SLA en H+4 avec un calendrier définissant des horaires d&rsquo;ouverture de 8h à 18h, un ticket ouvert à 16h aura une date d&rsquo;échéance le lendemain à 10h.</p></article></body></html>
