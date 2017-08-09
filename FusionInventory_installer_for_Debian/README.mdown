@@ -55,13 +55,12 @@ By default, use 'make complete-install'
 if you encounter issues linked to missing dependancies :
 Please add them to global_setup.sh !
 
-## PARAMETER LE CRON PHP
+## SETUP CRONTAB
 
-On doit ajouter au fichier crontab (commande : crontab -e) la ligne
+You must add to the crontab file (command to type in a terminal : crontab -e) the following line :
 
 ```
-* * * * * /usr/bin/php /var/www/glpi/front/cron.php &>/dev/null
+* * * * * /usr/bin/[your version of php] /var/www/glpi/front/cron.php &>/dev/null
 ```
-
 
 
