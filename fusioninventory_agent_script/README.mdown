@@ -54,4 +54,6 @@ On peut s'assurer du fonctionnement de l'agent:
 
 * en forcant l'inventaire via la page de l'agent (http://localhost:62354/, http://localhost:62354/status) disponible a partir du .html inclus.
 
-* en lisant les logs (c:\Program Files\Fusioninventory-Agent\fusioninventory-agent.log), 
+* en lisant les logs (c:\Program Files\Fusioninventory-Agent\fusioninventory-agent.log)
+
+* Se reporter a la documentation présente avec l'installeur GLPI pour des problèmes relatifs à l'utilisation du logiciel

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "downloading fusioninventory for glpi";
-echo '======FUSIONINVENTORY_INSTALL============';
+echo '======INSTALL_FUSIONINVENTORY============';
 #echo "nombre d'argument du script : $#";
 echo 'installing fusioninventory for glpi';
 cd /tmp;
