@@ -1,15 +1,15 @@
 #!/bin/bash
 
 ######################FusionInventory-Agent setup script####
-LANGAGE = fr
-LINK = 'https://github.com/fusioninventory/fusioninventory-agent/releases/download/2.3.21/FusionInventory-Agent-2.3.21-1.pkg.tar.gz';
+LANGAGE=fr
+LINK='https://github.com/fusioninventory/fusioninventory-agent/releases/download/2.3.21/FusionInventory-Agent-2.3.21-1.pkg.tar.gz'
 ############################################################
 
 # FusionInventory-Agent setup script for osx using download link :
-PWD = $(pwd);
+PWD=$(pwd)
 echo'############Installing homebrew#############################'
 #Checking homebrew is present 
-HOMEBREW = $(homebrew -v)
+HOMEBREW=$(homebrew -v)
 if [[ $(HOMEBREW) ]]; then
 	echo "# homebrew is already installed"
 else
@@ -29,5 +29,5 @@ echo '############Terminating#####################################'
 rm -rf /opt/fusioninventory-agent_temp
 cd $(PWD)
 echo 'done'
-make configuration-help;
+make configuration-help
 make help;
