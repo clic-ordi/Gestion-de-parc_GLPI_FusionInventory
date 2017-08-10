@@ -9,23 +9,19 @@ LINK="https://github.com/fusioninventory/fusioninventory-agent/releases/download
 PWD=$(pwd);
 echo'############Installing homebrew#############################'
 #Checking homebrew is present 
-HOMEBREW=$("homebrew -v")
-echo "DEBUG : $PWD $HOMEBREW";
-if [ $(HOMEBREW) != '']; then
-	echo "# homebrew is already installed"
-else
-	echo "# Installing homebrew"
-	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-fi
+HOMEBREW=$(homebrew -v)
+echo "DEBUG : $PWD +++++++++++++++++++++++++++";
+echo "# Installing homebrew"
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 echo '############Installing make#############################';
 brew install make;
 echo '############Downloading the agent installer########################';
 brew install wget;
 mkdir /opt/fusioninventory-agent_temp;
 cd /opt/fusioninventory-agent_temp;
-wget $(LINK);
+wget $LINK;
 tar xfz fusioninventory-agent_macosx-intel_*.pkg.tar.gz;
-sudo installer -pkg FusionInventory-Agent.pkg -target / -lang $(LANGAGE);
+sudo installer -pkg FusionInventory-Agent.pkg -target / -lang $LANGAGE;
 echo '############Terminating#####################################';
 rm -rf /opt/fusioninventory-agent_temp;
 cd $(PWD);
