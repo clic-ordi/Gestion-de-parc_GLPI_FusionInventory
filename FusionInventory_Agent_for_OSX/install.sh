@@ -18,10 +18,10 @@ else
 	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 echo '############Installing make#############################'
-sudo brew install make
+brew install make
 echo '############Downloading the agent installer########################'
-sudo brew install wget
-sudo mkdir /opt/fusioninventory-agent_temp
+brew install wget
+mkdir /opt/fusioninventory-agent_temp
 cd /opt/fusioninventory-agent_temp
 wget $(LINK)
 tar xfz fusioninventory-agent_macosx-intel_*.pkg.tar.gz
