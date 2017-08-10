@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ######################FusionInventory-Agent setup script####
-LANGAGE='fr'
+LANGAGE="fr"
 LINK='https://github.com/fusioninventory/fusioninventory-agent/releases/download/2.3.21/FusionInventory-Agent-2.3.21-1.pkg.tar.gz'
 ############################################################
 
@@ -9,8 +9,9 @@ LINK='https://github.com/fusioninventory/fusioninventory-agent/releases/download
 PWD=$(pwd)
 echo'############Installing homebrew#############################'
 #Checking homebrew is present 
-HOMEBREW=$(homebrew -v)
-if [[ $(HOMEBREW) ]]; then
+HOMEBREW=$("homebrew -v")
+echo "DEBUG : $HOMEBREW"
+if [ $(HOMEBREW) != '']; then
 	echo "# homebrew is already installed"
 else
 	echo "# Installing homebrew"
