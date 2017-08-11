@@ -6,7 +6,7 @@ LINK='https://github.com/fusioninventory/fusioninventory-agent/releases/download
 
 # FusionInventory-Agent setup script for osx using download link :
 
-echo'############Installing homebrew#############################'
+echo '############Installing homebrew#############################'
 #Checking homebrew is present 
 HOMEBREW=$(brew -v)
 
@@ -28,7 +28,7 @@ mkdir ~/fusioninventory-agent;
 cd ~/fusioninventory-agent;
 
 sudo wget -P ~/fusioninventory-agent/ $LINK;
-sudo tar -xzf ~/fusioninventory-agent/FusionInventory-Agent*.tar.gz;
+sudo tar -xzf ~/fusioninventory-agent/FusionInventory-Agent-2.3.21-1.pkg.tar.gz;
 mv *.pkg ~/;
 ls -al;
 
