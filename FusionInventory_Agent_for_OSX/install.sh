@@ -5,11 +5,14 @@ LINK='https://github.com/fusioninventory/fusioninventory-agent/releases/download
 ############################################################
 
 # FusionInventory-Agent setup script for osx using download link :
-PWD=$(pwd);
+
 echo'############Installing homebrew#############################'
 #Checking homebrew is present 
 HOMEBREW=$(brew -v)
+
 echo "DEBUG : $PWD ; $HOMEBREW "
+echo "DEBUG : $LINK "
+
 if [ $(HOMEBREW) != '']; then
 	echo "# homebrew is already installed"
 else
@@ -20,15 +23,16 @@ echo '############Installing make#############################';
 brew install make;
 echo '############Downloading the agent installer########################';
 brew install wget;
-mkdir /opt/fusioninventory-agent_temp;
-cd /opt/fusioninventory-agent_temp;
-echo "DEBUG : $LINK "
-wget $(LINK);
-tar xfz fusioninventory-agent_macosx-intel_*.pkg.tar.gz;
-sudo installer -pkg FusionInventory-Agent.pkg -target / -lang en;
+
+mkdir /temp/fusioninventory-agent;
+cd /temp/fusioninventory-agent;
+
+sudo wget -P /temp/fusioninventory-agent/ $LINK;
+sudo tar -xzf /temp/fusioninventory-agent/FusionInventory-Agent*.tar.gz;
+ls -al;
+
+sudo installer -pkg FusionInventory-Agent*.pkg -target / -lang en;
 echo '############Terminating#####################################';
-rm -rf /opt/fusioninventory-agent_temp;
-cd $(PWD);
+rm /temp/fusioninventory-agent/*.tar.gz*;
 echo 'done';
-make configuration-help;
-make help;
+s
