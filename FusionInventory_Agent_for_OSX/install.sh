@@ -23,16 +23,16 @@ echo '############Installing make#############################';
 brew install make;
 echo '############Downloading the agent installer########################';
 brew install wget;
+cd ~;
+mkdir ~/fusioninventory-agent;
+cd ~/fusioninventory-agent;
 
-mkdir /temp/fusioninventory-agent;
-cd /temp/fusioninventory-agent;
-
-sudo wget -P /temp/fusioninventory-agent/ $LINK;
-sudo tar -xzf /temp/fusioninventory-agent/FusionInventory-Agent*.tar.gz;
+sudo wget -P ~/fusioninventory-agent/ $LINK;
+sudo tar -xzf ~/fusioninventory-agent/FusionInventory-Agent*.tar.gz;
+mv *.pkg ~/;
 ls -al;
 
 sudo installer -pkg FusionInventory-Agent*.pkg -target / -lang en;
 echo '############Terminating#####################################';
-rm /temp/fusioninventory-agent/*.tar.gz*;
+rm ~/fusioninventory-agent/*.tar.gz*;
 echo 'done';
-s
