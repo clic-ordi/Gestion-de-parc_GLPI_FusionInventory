@@ -1,5 +1,7 @@
 # Gestion-de-parc_GLPI_FusionInventory
 
+Le fichier Agent_status.html est un raccourcis vers la page de login du serveur GLPI et la page de l'agent du client FusionInventory.
+
 ## Installateur du serveur GLPI sur debian
 
 Le dossier FusionInventory_installer_for_Debian (pas super bien nommé), contient le script de mise en place du serveur GLPI et de téléchargement du plugin FusionInventory. Il faut par la suite activer et installer le plugin par l'interface graphique de GLPI.
@@ -15,8 +17,6 @@ Merci de signaler les points d'ombres/manques que vous pourriez rencontrer, la d
 ### Windows 
 
 Le dossier FusionInventory_for_Windows contient un script en .vbs qui doit être lancé dans une console powershell administrateur afin d'installer l'agent.
-
-Le fichier Agent_status.html est un raccourcis vers la page de login du serveur GLPI et la page de l'agent du client FusionInventory.
 
 Le dossier FusionInventory_for_Windows contient un fichier README.md qui donne les informations nécessaires au lancement de l'agent sous windows.
 
